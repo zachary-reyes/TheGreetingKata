@@ -27,7 +27,7 @@ public class GreetingTest {
         assertEquals("HELLO, JERRY!", p.greet(shoutName));
         assertEquals("Hello, Jill and Jane.", p.greet(twoNames));
         assertEquals("Hello, Amy, Brian, and Charlotte.", p.greet(arbNames));
-        //assertEquals("Hello, Amy and Charlotte. AND HELLO BRIAN!", p.greet(req6));
+        assertEquals("Hello, Amy and Charlotte. AND HELLO BRIAN!", p.greet(req6));
     }
 
 

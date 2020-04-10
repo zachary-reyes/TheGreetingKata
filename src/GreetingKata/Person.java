@@ -1,9 +1,12 @@
+
+
 package GreetingKata;
 
 public class Person {
 
     public String greet(String[] name) {
         char c;
+        String uppers = "";
         if (name != null && name.length != 0) {
             if (name.length < 2) {
                 for (int i = 1; i < name[0].length(); i++){
@@ -16,10 +19,16 @@ public class Person {
             }
             String result = "Hello, " + name[0];
             for(int j = 1; j < name.length - 1; j++){
-                result += (", " + name[j] + ",");
+                if (Character.isLowerCase(name[j].charAt(1))) {
+                    result += (", " + name[j] + ",");
+                }
+                else{
+                    uppers += " AND HELLO " + name[j] + "!";
+                }
+
             }
             result += (" and " + name[name.length - 1] + ".");
-            return result;
+            return result + uppers;
 
         }
         else {
