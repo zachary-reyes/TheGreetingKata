@@ -14,6 +14,7 @@ public class GreetingTest {
     String[] twoNames = {"Jill", "Jane"};
     String[] arbNames = {"Amy", "Brian", "Charlotte"};
     String[] req6 = {"Amy", "BRIAN", "Charlotte"};
+    String[] req7 = {"Bob", "Charlie, Dianne"};
 
     @Before
     public void setUp() throws Exception {
@@ -28,6 +29,8 @@ public class GreetingTest {
         assertEquals("Hello, Jill and Jane.", p.greet(twoNames));
         assertEquals("Hello, Amy, Brian, and Charlotte.", p.greet(arbNames));
         assertEquals("Hello, Amy and Charlotte. AND HELLO BRIAN!", p.greet(req6));
+        assertEquals("Hello, Bob, Charlie, and Dianne.", p.greet(req7));
+
     }
 
 
